@@ -31,7 +31,7 @@ Accomplishments that I'm proud of
 Not only can the device code be used for lighting the LED strip, but it can also be used for other hardware control projects. Since the Arduino simply accepts UDP packets and acts accordingly, there are limitless possibilities for creating and controlling an Internet of Things.
 What I learned
 
-Real-time communication over WiFi generally is pretty slow. The Myo armband requires a heavy amount of calibration, and will hopefully have a lot of the bugs worked out in the near future.
+Real-time communication over WiFi is generally pretty slow. The Myo armband requires a heavy amount of calibration, and will hopefully have a lot of the bugs worked out in the near future.
 What's next for MyoLuminati
 
 Using a second Myo armband, a greater degree of accuracy and a larger host of features can be achieved. The LED strip could also be embedded in clothing, which would be sure to create a marketable and frankly, awesome piece of partywear. Furthermore, the PC used to connect to Myo and send UDP packets could be replaced by an iPhone app for greatly increased portability. In another use case, the strips could simply be mounted on the wall as a piece of intuitively-controlled home-automation technology.
