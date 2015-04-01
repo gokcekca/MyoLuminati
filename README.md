@@ -1,5 +1,5 @@
 # MyoLuminati
-Co-Authored by MichaelLukowski
+Co-Authored by gokcekca, BerndtSam, and MichaelLukowski 
 
 Inspiration
 
