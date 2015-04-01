@@ -51,39 +51,22 @@ int communicate(char in[], char in2[] = ""){
 	{
 		// Creation failed!
 	}
-	//Now we'll set the sockaddr variables:
-	sockaddr.sin_family = AF_INET; // Must be AF_INET
-	// If this is the Server:
-	sockaddr.sin_addr.s_addr = INADDR_ANY; // Means we will "answer" to all addresses.
-	// Or if this is the client, set IP of the server to connect to.
+	sockaddr.sin_family = AF_INET; 
+	sockaddr.sin_addr.s_addr = INADDR_ANY; 
 	sockaddr.sin_addr.s_addr = inet_addr("192.168.0.102"); // IP to communicate with.
 
-	// The following sets our communication port.
-	// 'htons()' reverses the bytes (0x1020 would become 0x2010).
-	// This metod is called Big Endian and it was first used on Unix systems, you
-	// have to call it because all systems work that way
 	sockaddr.sin_port = htons(APP_PORT);
-
-	// A server need to bind the socket to itself in order to receive all the packets
-	// it gets from a port
-
 	int ret = bind(sock, (SOCKADDR *)&sockaddr, sizeof(SOCKADDR));
 	if (ret)
 	{
 		// Bind failed!
 	}
 
-	// That's it, now let's send a message...
 	char buffer[10];
 	strcpy(buffer, three);
-	//buffer[0] = in[0];
 	int len = sizeof(SOCKADDR);
 	sendto(sock, buffer, strlen(buffer), 0, (SOCKADDR *)&sockaddr, sizeof(SOCKADDR));
-	// Notice we use sendto() and NOT send(), because we use UDP!
-
 	// Easy huh?? Let's receive a packet..
-
-	//closesocket(sock);
 	WSACleanup();
 	return 0;
 
